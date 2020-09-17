@@ -447,7 +447,7 @@ unique_users = df[~df['user_id'].isnull()].user_id.unique().size# The number of 
 user_article_interactions = df.shape[0]# The number of user-article interactions
 ```
 
-`4.` 在以下单元格中查找查看次数最多的文章的 **article_id**，以及被查看频率。在与公司领导讨论后，`email_mapper` 函数被视为将用户映射到 ID 的合理方式。有少数几个空值，并且所有这些空值都可能属于一个用户（我们以这种方式使用以下函数存储了这些值）。
+`4.` 在以下单元格中查找查看次数最多的文章的 **article_id**，以及被查看频率。
 
 
 ```python
@@ -1568,7 +1568,7 @@ t.sol_5_test(sol_5_dict)
     This all looks good!  Nice job!
     
 
-`6.` 如果是新用户，你可以使用上述哪个函数做出推荐？请解释。你能想到更好的推荐方法吗？在以下单元格中解释向新用户做出推荐的更好方法。
+`6.` 关于冷启动
 
 user_user_recs可以为新用户推荐文章，只是这样的推荐完全是按照观看文章数最多的用户看过的文章来推荐的。此时采用基于文章排名的推荐模式更加奏效，也就是get_top_article_ids方法的推荐文章
 
